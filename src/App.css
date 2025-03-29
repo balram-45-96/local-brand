@@ -1,0 +1,102 @@
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+a{
+  text-decoration: none;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.whiteDots .slick-dots li.slick-active button::before,
+.whiteDots .slick-dots li.slick-active button:before,
+.whiteDots .slick-dots li button:before,
+.whiteDots .slick-dots li button::before {
+    content: '';
+    opacity: 1;
+    background-color: #fff;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+.whiteDots .slick-dots li button:before,
+.whiteDots .slick-dots li button::before{
+  opacity: 0.5;
+}
+.whiteDots .slick-dots li{
+    height: 9px;
+    width: 15px;
+}
+
+.categorySliderArrow .slick-prev, .categorySliderArrow .slick-next{
+  background: #d9d7d7;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.categorySliderArrow .slick-prev{
+  right: 54px;
+  top: -48px;
+  left: auto;
+}
+.categorySliderArrow .slick-next{
+  right: 0px;
+  top: -48px;
+}
+.categorySliderArrow .slick-next:before{
+  content: '\e5c8';
+  font-family: 'Material Icons';
+  display: inline-block;
+  font-size: 19px;
+}
+.categorySliderArrow .slick-prev:before{
+  content: '\e5c4';
+  font-family: 'Material Icons';
+  display: inline-block;
+  font-size: 19px;
+}
+.categorySliderArrow .slick-slide div{
+  display: flex;
+  justify-content: center;
+}
+
+/* accordion css */
+.detailAcordion .MuiAccordion-rounded{
+  padding: 0;
+  border: 0;
+  box-shadow: unset;
+  background: transparent;
+}
+
+@media only screen and (max-width: 900px) {
+  .categorySliderArrow .slick-prev, .categorySliderArrow .slick-next{
+      width: 30px;
+      height: 30px;
+      top:-34px;
+  }
+  .categorySliderArrow .slick-next:before, .categorySliderArrow .slick-prev:before{
+    font-size: 16px;
+  }
+  .categorySliderArrow .slick-prev{
+    right: 40px;
+  }
+}
+a{
+  text-decoration: none !important;
+}
+
+.categorySliderArrow .slick-slide img{
+  width: 115px;
+  max-width: 100%;
+  height: auto;
+  max-height: 121px;
+  object-fit: cover;
+  border-radius: 9px;
+}
