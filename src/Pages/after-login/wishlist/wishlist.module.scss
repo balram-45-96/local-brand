@@ -1,0 +1,134 @@
+@import "../../../assets/scss/mixins.scss";
+@include pageTitle;
+.wishlist{
+    padding: 50px 0 60px;
+    @include md{
+        padding: 40px 0;
+    }
+    
+    .wishlistWrapper{
+        margin-bottom: 40px;
+        @include md{
+            margin-bottom: 24px;
+        }
+        .moveToBag{
+            color: #000;
+            font-size: $font-md;
+            font-weight: 500;
+            border-radius: 4px;
+            width: 160px;
+            height: 40px;
+            @include mo{
+                padding: 5px;
+                width: 130px;
+                font-size: $font-sm;
+            }
+        }
+    }
+    
+    .categoryRow{
+        display: flex;
+        margin: 0 -15px;
+    }
+}
+.modalOverlay{
+    .modalBody{
+        width: 900px;
+        padding-top: 25px;
+        @include laptop{
+            max-width: 600px;
+            width: 100%;
+        }
+        @include md{
+            padding-top: 15px;
+        }
+        .modalHeader{
+            border-bottom: 1px solid #dcdcdc;
+            padding-bottom: 20px;
+            @include md{
+                padding-bottom: 10px;
+            }
+            .modalHeading{
+                font-size: 24px;
+                letter-spacing: 1px;
+                line-height: 2;
+                @include md{
+                    font-size: $font-mdlg;
+                }
+            }
+            .closeBtn{
+                @include md{
+                    top:20px
+                }
+            }
+        }
+        
+        .filterList{
+            border-right: 1px solid #dcdcdc;
+            ul{
+                padding-bottom: 45px;
+                padding-top: 15px;
+                @include md{
+                    padding-bottom: 20px;
+                }
+                .filters{
+                    padding-left: 38px;
+                    border-left: 4px solid white;
+                    color: #000000;
+                    font-size: 21px;
+                    font-weight: 600;
+                    line-height: 48px;
+                    letter-spacing: 0.84px;
+                    padding-right: 50px;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    @include md{
+                        padding-left: 15px;
+                        border-left: 2px solid white;
+                        font-size: $font-lg;
+                        line-height: 32px;
+                        letter-spacing: normal;
+                        padding-right: 15px;
+                        margin-bottom: 5px;
+                    }
+                    @include mo{
+                        padding-left: 7px;
+                        border-left: 1px solid white;
+                        font-size: $font-sm;
+                        line-height: 1.5;
+                        padding-right: 7px;
+                        margin-bottom: 5px;
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    &.active{
+                        border-color: $primaryRed;
+                        color: $primaryRed;
+                    }
+                }
+            }
+        }
+        .filterCheckWrapper{
+            padding: 15px 35px;
+            @include md{
+                padding: 10px 15px;
+            }
+            .filterCheck{
+                margin-bottom: 10px;
+                min-height: 40px;
+                display: flex;
+                align-items: center;
+                @include md{
+                    margin-bottom: 8px;
+                    min-height: 30px;
+                }
+                @include mo{
+                    margin-bottom: 5px;
+                    min-height: 20px;
+                }
+            }
+        }
+    }
+}
+

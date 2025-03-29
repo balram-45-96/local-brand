@@ -1,0 +1,42 @@
+
+@import "./styles.scss";
+
+@mixin sm {
+    @media (max-width: #{$screen-sm}) {
+        @content;
+    }
+}
+
+@mixin mo {
+    @media (max-width: #{$screen-mo}) {
+        @content;
+    }
+}
+@mixin smmo {
+    @media (max-width: #{$screen-smmo}) {
+        @content;
+    }
+}
+@mixin md {
+    @media (max-width: #{$screen-md}) {
+        @content;
+    }
+}
+
+@mixin ipad {
+    @media (max-width: #{$screen-ipad}) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (max-width: #{$screen-laptop}) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (max-width: #{$screen-lg}) {
+        @content;
+    }
+}

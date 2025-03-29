@@ -1,0 +1,35 @@
+@import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/mixins.scss";
+.categoryLink{
+  height: 170px;
+  display: inline-flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  @include mo{
+    padding: 0 5px;
+    height: 140px;
+  }
+  .slideImgCard{
+    height: 140px;
+    @include mo{
+      height: 110px;
+    }
+  }
+  .cateGorySlideImg{
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 127px;
+      @include mo{
+        max-width: 80%;
+        max-height: 100px;
+      }
+  }
+  .categoryProduct{
+      margin-top: auto;
+      @include mo{
+        font-size:12px;
+      }
+  }
+}

@@ -1,0 +1,120 @@
+@import "../../../assets/scss/mixins.scss";
+@include filterModal;
+.login{
+    padding: 60px 0;
+    @include laptop{
+        padding: 30px 0;
+    }
+    .formRow{
+        margin: 0 -15px;
+        .w50{
+            width: 50%;
+            padding: 0 15px;
+            &.imgBox{
+                @include md{
+                    display: none;
+                }
+                .mobileImage{
+                    max-width: 350px;
+                }
+            }
+            
+            &.loginFormWrapper{
+                @include md{
+                    margin: auto;
+                    width: 100%;
+                }
+               .loginInnerWrapper{
+                max-width: 400px;
+                .loginHeading{
+                    font-size: $font-xlg;
+                    font-family: Inter;
+                    line-height: 1;
+                    letter-spacing: 1.44px;
+                    @include md{
+                        text-align: center;
+                    }
+                    @include mo{
+                        letter-spacing: normal;
+                        font-size: $font-mdlg;
+                    }
+                }
+                .enterDetail{
+                    margin: 12px 0px 10px;
+                    @include md{
+                        text-align: center;
+                    }
+                }
+                .formWrapper{
+                    .inputBox{
+                        margin-bottom: 20px;
+                    }
+                    .btnWrapper{
+                        button{
+                            font-size: $font-lg;
+                            height: 48px;
+                            margin-bottom: 12px;
+                            @include md{
+                                height: 32px;
+                                font-size: $font-sm;
+                            }
+                            &:hover{
+                                img{
+                                    filter: brightness(0) invert(1);
+                                }
+                            }
+                            img{
+                               width: 18px;
+                            }
+                        }
+                    }
+                    .haveAccountWrapper{
+                        padding-top: 10px;
+                        span{
+                            color:rgba(0,0,0,0.7);
+                            padding-right:10px;
+                        }
+                        a{
+                            color:rgba(0,0,0,0.7);
+                            text-decoration: underline;
+                            font-size: $font-lg;
+                            font-weight: 600;
+                        }
+                    }
+                }
+               }
+            }
+        }
+    }
+    
+    &.signup{
+        padding: 40px 0;
+        .formRow{
+            .w50{
+                &.loginFormWrapper{
+                   .loginInnerWrapper{
+                    .formWrapper{
+                        .btnWrapper{
+                            button{
+                                width: 120px;
+                                margin-bottom: 0;
+                            }
+                        }
+                        .haveAccountWrapper{
+                            a{
+                                text-decoration: none;
+                                span{
+                                    color:$secondaryRed;
+                                    padding: 0;
+                                    font-size: $font-sm;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                    }
+                   }
+                }
+            }
+        }
+    }
+}

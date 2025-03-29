@@ -1,0 +1,57 @@
+@import "../../../assets/scss/mixins.scss";
+@include pageTitle;
+@include card;
+.EditProfileWrapper{
+    padding: 50px 15px 60px;
+    max-width: 740px;
+    width: 100%;
+    margin: auto;
+    @include md{
+        padding: 40px 15px;
+    }
+    .pageTitel{
+        color:$secondaryRed;
+    }
+    .formWrapper{
+        margin-top: 30px;
+        .inputRowWrapper{
+            grid-gap: 4%;
+            display: flex;
+            @include mo{
+                flex-direction: column;
+                grid-gap: 0;
+            }
+            &.passwordWrapper{
+              flex-direction: column;
+              .inputBox{
+                  width: 100%;
+              }
+            }
+           .inputBox{
+              width: 48%;
+              padding-bottom: 20px;
+              @include mo{
+                width: 100%;
+              }
+              label{
+                  font-size: $font-sm;
+                  font-weight:500;
+                  margin-bottom: 8px;
+                  display: block;
+              }
+           }
+        }
+        .btnWrapper{
+           justify-content: flex-end;
+           .redButton{
+             min-width: 180px;
+           }
+           .textBtn{
+              color:$black;
+              padding-right: 20px;
+              font-size: $font-lg;
+              font-weight: 500;
+           }
+        }
+    }
+}

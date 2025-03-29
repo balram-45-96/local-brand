@@ -1,0 +1,190 @@
+@import "../../../assets/scss/mixins.scss";
+@include pageTitle;
+@include card;
+.detailsPageWrapper{
+    padding: 50px 15px 60px;
+    @include md{
+        padding: 40px 15px;
+    }
+    
+    .productType{
+        margin: 30px 0 20px;
+        @include laptop{
+            margin: 30px 0 20px;
+        }
+        img{
+            margin-right: 7px;
+        }
+    }
+    .card{
+        .productDetailwWrapper{
+          padding-right: 10px;
+        }
+        .productDetail{
+            margin: 10px 0 15px;
+            @include md{
+                margin: 8px 0 10px;
+                font-size: $font-sm;
+            }
+        }
+        .cardImg{
+            width: 24px;
+            margin-right: 7px;
+            @include md{
+                width: 18px;
+                margin-right: 5px;
+            }
+        }
+        .deliveryInfo{
+            @include md{
+                font-size: $font-sm;
+            }
+        }
+        .locationDetail{
+            margin-bottom: 15px;
+            @include md{
+                margin-bottom: 10px;
+            }
+            .location{
+                @include md{
+                    font-size: $font-sm;
+                }
+            }
+        }
+        .ratingBox{
+            img{
+                width: 24px;
+                margin-right: 7px;
+                @include md{
+                   width: 20px;
+                   margin-right: 5px;
+                }
+            }
+            .rating{
+                font-size: $font-lg;
+                line-height: 1.5;
+                @include md{
+                    font-size: $font-sm;
+                    font-weight: 500;
+                 }
+            }
+        }
+
+        &.productCardSection{
+            margin-bottom: 24px;
+            @include laptop{
+                padding:15px;
+                margin-bottom: 30px;
+            }
+            @include md{
+                padding: 15px 0;
+            }
+            .acordionHeader{
+                font-size: $font-mdlg;
+                font-weight: 600;
+                line-height: 1.5;
+                letter-spacing: 1px;
+                @include laptop{
+                    font-size: $font-xlg;
+                }
+                @include md{
+                    font-size: $font-mdlg;
+                    letter-spacing: normal;
+                }
+            }
+            .productCardWrapper{
+                 padding:36px 0;
+                 border-bottom: 1px solid #E3E3E3;
+                 @include mo{
+                    flex-direction: column;
+                 }
+                 
+                 @include laptop{
+                    padding:28px 0;
+                 }
+                 &:first-child{
+                    padding-top: 0;
+                 }
+                 &:last-child{
+                    padding-bottom: 0;
+                    border-bottom: none;
+                 }
+                .productCard{
+                    padding-right: 10px;
+                    .productImg{
+                        margin-right: 20px;
+                        @include md{
+                            margin-right: 10px;
+                        }
+                        img{
+                            border-radius: 12px;
+                            width: 113px;
+                            height: 90px;
+                            overflow: hidden;
+                            object-fit: cover;
+                            @include mo{
+                                width: 100px;
+                                height: 72px; 
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+                    .productInfo{
+                        span{
+                            letter-spacing: 0.8px;
+                            line-height: 1.5;
+                            @include laptop{
+                                font-size: $font-smlg;
+                                line-height: 1.5;
+                            }
+                            @include md{
+                                font-size: $font-lg;
+                            }
+                            @include mo{
+                                font-size: $font-sm;
+                            }
+                        }
+                        .productName{
+                            font-size: $font-smlg;
+                            @include mo{
+                                font-size: $font-lg;
+                            }
+                        }
+                        .productCombo{
+                            color: #A8A8A8;
+                        }
+                    }
+                }
+                .productAddBtn{
+                    border-radius: 15px;
+                    min-width: 100px;
+                    height: 40px;
+                    color: #FFF;
+                    font-size: $font-lg;
+                    font-weight: 600;
+                    span{
+                        // padding-left: 10px;
+                        font-size: 15px;
+                        @include mo{
+                            font-size: $font-smlg;
+                        }
+                    }
+                    @include mo{
+                        font-size: $font-sm;
+                        min-width: 90px;
+                        height: 36px;
+                        padding: 5px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.removeBtn{
+    font-size: 21px !important;
+}
+.valueQty{
+    padding: 0 10px;
+}

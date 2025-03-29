@@ -1,0 +1,106 @@
+@import '../../../assets/scss/mixins.scss';
+@import '../../../assets/scss/styles.scss';
+.footerWrapper{
+    margin-top: auto;
+    background-color: $black;
+    color: $white;
+    padding: 80px 0 60px;
+    @include ipad{
+        padding: 50px 0 40px;
+    }
+    .row{
+        .footerCol{
+            @include md{
+                width: 50%;
+                margin-bottom: 40px;
+            }
+            @include mo{
+                width: 100%;
+            }
+            .footerHeading{
+                margin-bottom: 24px;
+                font-weight: 500;
+                font-size: 17px;
+                @include laptop{
+                    margin-bottom: 15px;
+                }
+                @include ipad{
+                    font-size: $font-smlg;
+                }
+            }
+            .emailWraPPER{
+                max-width: fit-content;
+                .footerInput{
+                    border: 1px solid #fafafa;
+                    background-color: transparent;
+                    border-radius: 4px;
+                    padding: 12px 60px 12px 16px; 
+                    color: #FAFAFA;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    max-width: 217px;
+                    box-sizing: border-box;
+                    &::placeholder{
+                        opacity: 0.4;
+                    }
+                }
+                .footerSendBtn{
+                    position: absolute;
+                    right: 15px;
+                    top:12px;
+                }
+            }
+            
+            .offText{
+                margin: 24px 0 16px;
+                @include ipad{
+                    margin: 16px 0 10px;
+                }
+            }
+            ul{
+                li{
+                    padding: 8px 0;
+                    @include ipad{
+                        padding: 4px 0;
+                    }
+                    &:first-child{
+                        padding-top: 0;
+                    }
+                    &:last-child{
+                        padding-bottom: 0;
+                    }
+                    a{
+                        color: $white;
+                        font-size: 13px;
+                        font-weight: 400;
+                        line-height: 1.5;
+                        @include ipad{
+                            font-size: $font-sm;
+                        }
+                   }
+                }
+            }
+           .appleStoreBtn{
+              margin: 10px 0 20px;
+           }
+           .socialMediaBox{
+            ul{
+                @include mo{
+                    justify-content: flex-start;
+                }
+                li{
+                    padding: 0;
+                    margin: 8px 0;
+                    @include mo{
+                        margin: 8px;
+                        &:first-child{
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+           }
+         }
+    }
+}

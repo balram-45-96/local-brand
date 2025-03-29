@@ -1,0 +1,31 @@
+@import "../../../assets/scss/mixins.scss";
+@include pageTitle;
+@include filterModal;
+.category{
+    padding: 50px 0 60px;
+    @include md{
+        padding: 40px 0;
+    }
+    .tabWrapper{
+        padding: 15px 0 10px;
+        button{
+            margin: 10px 15px 10px 0;
+            @include mo{
+                margin: 5px 5px 5px 0;
+            }
+        }
+    }
+    .categoryTitle{
+        font-size: $font-mdlg;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+    .categoryRow{
+        display: flex;
+        margin: 0 -15px;
+    }
+}
+
+
+

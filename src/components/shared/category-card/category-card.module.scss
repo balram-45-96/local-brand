@@ -1,0 +1,146 @@
+@import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/mixins.scss";
+
+.productCategoryLink{
+  width: 33.33%;
+  padding: 0 20px;
+  margin-bottom: 40px;
+  @include md{
+    width: 50%;
+    padding: 0 15px;
+    margin-bottom: 20px;
+  }
+  @include mo{
+    width: 100%;
+  }
+  .productTypes{
+    border-radius: 15px;
+    box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.10);
+    height: 100%;
+    .productImgBox{
+        .productImage{
+            border-radius: 15px;
+            height: 250px;
+            object-fit: cover;
+        }
+        .offCard{
+            border-radius: 30px;
+            background: rgba(0, 0, 0, 0.49);
+            box-shadow: 0px 4px 39px 0px rgba(0, 0, 0, 0.07);
+            line-height: 1.5;
+            padding: 6px 30px;
+            position: absolute;
+            top: 20px;
+            left: 15px;
+        }
+        .timeCard{
+            border-radius: 30px;
+            border: $secondaryBorder;
+            background: $white;
+            box-shadow: 0px 4px 39px 0px rgba(0, 0, 0, 0.07);
+            padding: 6px 18px;
+            position: absolute;
+            bottom: 20px;
+            right: 15px;
+        }
+    }
+    .productContentBox{
+        padding: 15px 10px 15px 15px;
+        @include ipad{
+          padding: 10px;
+        }
+        .productNameRow{
+            .productName{
+                letter-spacing: 0.2px;
+                padding-right: 10px;
+                @include ipad{
+                  font-size: $font-smlg;
+                }
+            }
+            .ratingBox{
+               .ratingIcon{
+                 height:15px;
+                 margin-right: 8px;
+               }
+               .rating{
+                line-height: 1;
+               }
+            }
+        }
+        .addressIcon{
+          width: 16px;
+          margin-bottom: -1px;
+        }
+        .productDis{
+            margin: 12px 0;
+            @include ipad{
+              margin: 10px 0;
+              font-size: $font-sm;
+            }
+        }
+    }
+    
+    .circleCard{
+      background-color: $white;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 15px;
+      top:20px;
+      z-index: 2;
+      display: none;
+      span{
+        font-size: $font-lg;
+      }
+      &.eye{
+          top:60px;
+      }
+    }
+  }
+
+  &.bestProduct{
+    .addressBlock,.offCard,.timeCard{
+      display: none;
+    }
+    .circleCard{
+      display: flex;
+      &.delete{
+        display: none;
+      }
+    }
+    .strikePrice{
+      text-decoration: line-through;
+      color:rgba(0,0,0,0.5);
+    }
+    .price{
+      color:#DB4444;
+      margin-right: 12px;
+    }
+  }
+
+  &.wishlist{
+    .addressBlock,.offCard,.timeCard,.favorite{
+      display: none;
+    }
+    .circleCard{
+      display: flex;
+    }
+  }
+}
+
+.addressmanage{
+  white-space: nowrap;
+  width: 311px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  font-size: 14px;
+
+}
+.addressBlock{
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,90 @@
+@import "../../../assets/scss/mixins.scss";
+@include pageTitle;
+@include card;
+.contactUsWrapper{
+    padding: 50px 0px 60px;
+    @include md{
+        padding: 40px 0px;
+    }
+    .contactRow{
+        display: flex;
+        gap: 2%;
+        @include sm{
+            flex-direction: column;
+            gap:0;
+        }
+        .card{
+            padding: 20px;
+        }
+        .contactCard{
+            max-width: 28%;
+            @include md{
+                max-width: 40%;
+            }
+            @include sm{
+                max-width: 100%;
+            }
+            .cardBox{
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid rgba(0,0,0,0.5);
+            }
+            .contactIcon{
+               background-color: $primaryRed;
+               width: 32px;
+               height: 32px;
+               border-radius: 50%;
+               margin-right: 10px;
+               span{
+                 color: $white;
+                 font-size: $font-mdlg;
+               }
+            }
+            .availabaleText{
+                margin: 15px 0 10px;
+            }
+        }
+        .inputCardWrapper{
+            max-width: 70%;
+            @include md{
+                max-width: 60%;
+            }
+            @include sm{
+                max-width: 100%;
+                margin-top: 24px;
+            }
+            .inputRowWrapper{
+                grid-gap: 1.33%;
+                display: flex;
+                @include md{
+                    flex-direction: column;
+                    grid-gap: 0;
+                }
+                &.textAreaWrapper{
+                    .inputBox{
+                        width: 100%;
+                        textarea{
+                        height: 140px;
+                        }
+                    }
+                }
+                .inputBox{
+                    width: 32%;
+                    padding-bottom: 20px;
+                    @include md{
+                    width: 100%;
+                    }
+                }
+            }
+        }
+        
+    }
+    
+   
+    .btnWrapper{
+        justify-content: flex-end;
+        .redButton{
+            min-width: 180px;
+        }
+    }
+}

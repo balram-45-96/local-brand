@@ -1,0 +1,229 @@
+::-webkit-scrollbar {
+  visibility: hidden
+}
+@import "./variables.scss";
+// common css start
+
+ .jusctifyContentSpaceBetween {
+   justify-content: space-between;
+ }
+
+ .justifyContentSpaceEvenly {
+   justify-content: space-evenly;
+ }
+ 
+// end common css
+
+html {
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+.inter{
+  font-family: 'Inter', sans-serif;
+}
+//comman classes
+.noWrape{
+  white-space: nowrap;
+}
+
+.w100{
+  width: 100%;
+}
+.h100{
+  height: 100%;
+}
+.w50 {
+  width: 50%;
+}
+.dBlock{
+  display: block;
+}
+.dInBlock{
+  display: inline-block;
+}
+.dNone {
+  display: none;
+}
+.dContents{
+  display: contents;
+}
+.textDecorationNone{
+  text-decoration: none;
+}
+.blackLink{
+ color:$black;
+}
+.pointer{
+  cursor: pointer;
+}
+
+// text transform
+.capitalize {
+  text-transform: capitalize !important;
+}
+
+//margin classes
+.mAuto{
+  margin: auto;
+}
+.mlAuto{
+  margin-left: auto;
+}
+.mrAuto {
+  margin-right: auto;
+}
+.mb5{
+  margin-bottom: 5px;
+}
+.mr10{
+  margin-right: 10px;
+}
+.mr15{
+  margin-right: 15px;
+}
+.mr20{
+  margin-right: 20px;
+}
+.mt10{
+  margin-top: 10px;
+}
+// padding css
+.pr5{
+  padding-right: 5px;
+}
+// postion
+.relative{
+  position: relative;
+}
+.absolute{
+  position: absolute;
+}
+//flex classes
+.dFlex{
+  display: flex;
+}
+.dBlock{
+  display: block;
+}
+.dinherit{
+  display: inherit;
+}
+.flexWrap{
+  flex-wrap: wrap;
+}
+.flexRow {
+  flex-direction: row;
+}
+.flexColumn {
+  flex-direction: column;
+}
+.justifyContentCenter{
+  justify-content: center;
+}
+.justifyContentEnd{
+  justify-content: flex-end;
+}
+.alignItemsCenter{
+  align-items: center;
+}
+.alignItemsStart {
+  align-items: flex-start;
+}
+.alignEnd{
+  align-items: flex-end;
+}
+.centerAlign{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flexCenter{
+  display: flex;
+  align-items: center;
+}
+.alignBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+//textAligment
+.textCenter{
+  text-align: center;
+}
+.textRight {
+  text-align: right;
+}
+.textLeft{
+  text-align: left;
+}
+.textUnderline{
+  text-decoration: underline;
+}
+.center{
+  max-width: 1210px;
+  width: 100%;
+  padding: 0 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.errorMessage{
+  color: $primaryRed;
+  font-size: 13px;
+  display: block;
+  margin-top: 5px;
+}
+.lightBorderBottom{
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.elipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  width: 100%;
+}
+
+.modalOverlay{
+  padding: 15px;
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  .modalBody{
+    border-radius: 20px;
+    background-color: $white;
+    position: relative;
+    .closeBtn{
+      cursor: pointer;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      span{
+        color:$black;
+        &:hover{
+          color:$lightGrey;
+        }
+      }
+    }
+  }
+}
+
+a{
+  text-decoration: none !important;
+}

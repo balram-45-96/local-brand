@@ -1,0 +1,388 @@
+@import "../../../assets/scss/mixins.scss";
+.home{
+    .homeBannerWrpper{
+      margin-top: 30px;
+      border:1px solid #DEE2E7;
+      border-radius: 10px;
+      padding: 20px;
+      box-sizing: border-box;
+      max-width: 1180px;
+      @include mo{
+        padding: 8px;
+        margin-top: 15px;
+      }
+      .homeBannerRow{
+        grid-column-gap: 18px;
+        @include ipad{
+            grid-column-gap: 10px; 
+        }
+        @include md{
+            flex-wrap: wrap;
+        }
+        .slick-dots li.slick-active button:before {
+            content: '';
+            opacity: 1;
+            color: $white;
+            width: 9px;
+            height: 9px;
+        }
+        .slick-dots li button:before{
+            color: $white;
+            opacity: 0.75;
+            content: '';
+            width: 9px;
+            height: 9px;
+        }
+         .homeBanenrCol{
+            width: 80%;
+            background-color: $secondaryRed;
+            border-radius: 10px;
+            padding: 10px 10px;
+            height: 349px;
+            @include ipad{
+                width: 77%;
+            }
+            @include md{
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .bannerContentWrapper{
+                position: absolute;
+                top:20px;
+                left: 50px;
+                @include md{
+                    top:10px;
+                    left: 15px;
+                }
+                .bannerFirstTitle{
+                    font-size: 28px;
+                    line-height: 1.2;
+                    @include md{
+                        font-size: $font-mdlg;
+                    }
+                    @include mo{
+                        font-size: $font-lg;
+                    }
+                }
+                .bannerSecondTitle{
+                    font-size: $font-big;
+                    line-height: 1.1;
+                    margin-bottom: 17px;
+                    @include md{
+                        font-size: 22px;
+                        font-weight: 600;
+                        margin-top: 5px;
+                        margin-bottom: 10px;
+                    }
+                    @include mo{
+                        font-size: $font-lg;
+                    }
+                }
+                .bannerBtn{
+                    background: $white;
+                    border: 0;
+                    color: #1C1C1C;
+                    padding: 10px 37px; 
+                    font-family: Inter;
+                    font-size: $font-lg;
+                    font-weight: 500;
+                    line-height: normal;
+                    @include mo{
+                        padding: 5px 10px; 
+                        font-size: $font-sm;
+                    }
+                }
+            }
+
+            img{
+                height: 330px;
+                object-fit: cover;
+            }
+
+         }
+         .homeBannerBtn{
+            width: 20%;
+            @include ipad{
+                width: 23%;
+            }
+            @include md{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                grid-gap: 5px;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            @include md{
+                justify-content: center;
+            }
+            button{
+                margin-bottom: 20px;
+                font-size: 14px;
+                @include laptop{
+                    font-size: $font-sm;
+                    margin-bottom:19px;
+                }
+                @include md{
+                    max-width: 200px;
+                    width: fit-content;
+                    padding: 8px 15px;
+                    margin-bottom:10px;
+                }
+
+            }
+            .discountBox{
+                background-color: $darkYellow;
+                height: 136px;
+                padding: 10px;
+                border-radius: 10px;
+                @include laptop{
+                    font-size: $font-sm;
+                }
+                @include ipad{
+                    height: 120px;
+                }
+                @include md{
+                    width: 100%;
+                    height: auto;
+                    padding: 7px;
+                }
+                span{
+                    max-width: 173px;
+                    @include md{
+                        max-width: 100%;
+                        br{
+                            display: none;
+                        }
+                    }
+                }
+            }
+         }
+      }
+    }
+    .ctegoryCardWrapper{
+        padding: 50px 0;
+        @include laptop{
+            padding: 30px 0;
+        }
+        @include mo{
+            padding: 20px 0;
+        }
+        .categoryName{
+            margin-bottom: 56px;
+            .categoryTitel{
+                font-size: 23px;
+                line-height: 1.25;
+                letter-spacing: 1.44px;
+                // @include lg{
+                //     font-size: 28px;
+                //     letter-spacing: 1px;
+                // }
+                @include mo{
+                    font-size: 20px;
+                    margin-bottom: 44px;
+                }
+            }
+        }
+    }
+    .getVoucherWrapper{
+        margin-top: 100px;
+        @include lg{
+            margin-top: 60px;
+        }
+        @include mo{
+            margin-top: 40px;
+        }
+       .col50{
+         width: 50%;
+         @include md{
+            width: 100%;
+        }
+         &.voucherContentBox{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: 90px;
+            @include md{
+                max-width: 500px;
+                width: 100%;
+                margin: auto;
+                padding-bottom: 30px;
+                text-align: center;
+            }
+            img{
+                width: 24%;
+                @include mo{
+                    max-width: 120px;
+                }
+            }
+         }
+         .downloadVoucherText{
+            font-size: 28px;
+            line-height: 1.5;
+            letter-spacing: 2.88px;
+            // @include lg{
+            //     font-size: 36px;
+            //     letter-spacing: 2px;
+            // }
+            @include md{
+                font-size: 28px;
+                letter-spacing: 2px;
+                font-weight: 600;
+            }
+         }
+         .getOff{
+            color: $lightGrey;
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 1.5;
+            letter-spacing: -0.96px;
+            margin: 41px 0 65px;
+            max-width: 410px;
+            @include lg{
+                margin: 30px 0 40px;
+            }
+            @include md{
+                margin:15px auto 20px;
+                font-size: 18px;
+            }
+         }
+       }
+    }
+
+    .serviceWrapper{
+        padding: 60px 0 125px;
+        @include laptop{
+            padding: 50px 0 70px;
+        }
+        @include md{
+            font-size: 16px;
+            padding: 10px 0 20px;
+        }
+        
+        .col4{
+            width:33.334%;
+            padding: 0 15px 15px;
+            @include laptop{
+                width:33%;
+            }
+            @include ipad{
+                width:100%;
+                padding-bottom: 25px;
+            }
+            .serviceCard{
+              .serviceImgWrapper{
+                width: 80px;
+                height: 80px;
+                background-color: rgba(0,0,0,0.4);
+                border-radius: 50%;
+                @include md{
+                    width: 60px;
+                    height: 60px;
+                }
+                .serviceImgbox{
+                    width: 50px;
+                    height: 50px;
+                    background-color: $black;
+                    border-radius: 50%;
+                    @include md{
+                        width: 48px;
+                        height: 48px;
+                    }
+                    img{
+                        width: 40px;
+                        @include md{
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+              }
+              .ServicTitle{
+                font-size: 20px;
+                line-height: 1.4;
+                margin: 24px 0 8px;
+                @include md{
+                    font-size: 16px;
+                    margin: 16px 0 6px;
+                }
+              }
+            } 
+        }
+    }
+    .SearchBar{
+        margin: 50px auto 15px;
+        @include ipad{
+            margin: 30px auto 10px;
+        }
+        .SearchBarCard{
+            max-width: 705px;
+            border-radius: 12px;
+            border: 1px solid #CFCECE;
+            padding: 10px 11px;
+            height: 59px;
+            @include ipad{
+                padding: 7px 10px;
+                height: 54px;
+            }
+            @include smmo{
+                height: 48px;
+                padding: 7px;
+            }
+           
+            fieldset{
+                border: 0;
+            }
+             > div:first-child{
+                width: 100%;
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: '\e8b6';
+                    font-family: 'Material Icons';
+                    color: $black;
+                    font-size: 26px;
+                    top: 0;
+                    bottom: 0;
+                    display: flex;
+                    align-items: center;
+                    @include mo{
+                        font-size: 20px;
+                    }
+                }
+                input{
+                    padding-left: 35px;
+                    color: #000000;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    &::placeholder {
+                        color: $black;
+                        opacity: 1;
+                    }
+                    @include mo{
+                        padding-left: 24px;
+                        font-size: $font-lg;
+                    }
+                }
+               
+             }
+             .allCategory{
+                white-space: nowrap;
+                padding-left: 12px;
+                line-height: 45px;
+                border-left: 1px solid #CFCECE;
+                margin-left: 10px;
+                font-size: 15px;
+                @include mo{
+                    display: none;
+                }
+             }
+        }
+    }
+    
+}
+
+.imgApp{
+    width: 35% !important;
+}

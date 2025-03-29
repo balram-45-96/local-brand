@@ -1,0 +1,33 @@
+@import "../../../assets/scss/mixins.scss";
+@import "../../../assets/scss/variables.scss";
+
+span{
+    letter-spacing: -0.015em;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    @include textStyling;
+}
+.xsText {
+    font-size: $font-xs;
+    @include textStyling;
+}
+.smText {
+    font-size: $font-sm;
+    @include textStyling;
+}
+.mdText {
+    font-size: $font-md;
+    @include textStyling;
+}
+.lgText {
+    font-size: $font-lg;
+    @include textStyling;
+}
+.smlgText{
+    font-size: $font-smlg;
+    @include textStyling;
+}
+.mdlgText {
+    font-size: $font-mdlg;
+    @include textStyling;
+}
